@@ -1,4 +1,5 @@
 "use client";
+
 import { School } from "@/lib/db";
 import Image from "next/image";
 
@@ -9,15 +10,17 @@ interface SchoolCardProps {
 export default function SchoolCard({ school }: SchoolCardProps) {
 	return (
 		<div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-			<div className="relative h-48 w-full">
+			<div className="relative h-48 w-full img-container">
+				{" "}
+				{/* Added class here */}
 				<Image
-					src={school.image || "/placeholder-school.jpg"}
+					src={school.image || "/School1.jpg"}
 					alt={school.name}
 					fill
 					className="object-cover"
 					onError={(e) => {
 						const target = e.target as HTMLImageElement;
-						target.src = "/placeholder-school.jpg";
+						target.src = "/School1.jpg";
 					}}
 				/>
 			</div>
