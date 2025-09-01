@@ -32,6 +32,7 @@ export default function AddSchoolForm() {
 				formData.append("file", data.imageFile[0]);
 
 				const uploadResponse = await fetch("/api/upload", {
+					// Corrected endpoint
 					method: "POST",
 					body: formData,
 				});

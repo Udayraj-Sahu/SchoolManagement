@@ -1,3 +1,4 @@
+"use client";
 import { School } from "@/lib/db";
 import Image from "next/image";
 
